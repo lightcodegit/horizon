@@ -168,7 +168,7 @@ impl Game<'_> {
     /// chat history, and no client chat event (vanilla's `ClientChatEvent`
     /// comes only from ChatScreen). An error when the player isn't in a
     /// server's play state or the Chat option blocks the message. API
-    /// @API:send_chat@.
+    /// 404.
     pub(super) fn native_send_chat(&mut self, message: &str) -> Result<(), String> {
         let Some(remote) = self.remote.as_ref() else {
             return Err("not connected to a server".into());
